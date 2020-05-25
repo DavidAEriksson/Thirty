@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">lab1thirty</string>
+    <string name="roll_dice_text">ROLL DICE</string>
+    <string name="take_score_text">TAKE SCORE</string>
+    <string name="thirty">THIRTY</string>
+    <string name="new_game_text">NEW GAME</string>
+    <string name="total_score">TOTAL SCORE:</string>
+    <string name="total_score_count">0</string>
+    <string name="game_over">GAME OVER</string>
+    <string name="score_placeholder">0</string>
+    <string-array name="spinnerItems">
+        <item>LOW</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string name="low">LOW:</string>
+    <string name="four">FOUR:</string>
+    <string name="five">FIVE:</string>
+    <string name="six">SIX:</string>
+    <string name="seven">SEVEN:</string>
+    <string name="eight">EIGHT:</string>
+    <string name="nine">NINE:</string>
+    <string name="ten">TEN:</string>
+    <string name="eleven">ELEVEN:</string>
+    <string name="twelve">TWELVE:</string>
+    <string name="total">TOTAL:</string>
+
+
+
+</resources>

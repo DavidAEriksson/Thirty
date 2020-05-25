@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/thirtyMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/thirty"
+        android:textColor="#73C3AA"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/actionButtonsLayout"
+        android:layout_width="409dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diceLayout">
+
+        <TableRow
+            android:id="@+id/actionButtonsTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/rollDiceButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginStart="80dp"
+                android:background="#2C2C2E"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/roll_dice_text"
+                android:textColor="#73C3AA" />
+
+            <Button
+                android:id="@+id/takeScoreButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginEnd="80dp"
+                android:background="#2C2C2E"
+                android:text="@string/take_score_text"
+                android:textColor="#73C3AA" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/spinnerTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:gravity="center"
+            android:paddingTop="10dp">
+
+            <Spinner
+                android:id="@+id/scoreValueSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/spinnerItems" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/diceLayout"
+        android:layout_width="293dp"
+        android:layout_height="194dp"
+        android:layout_marginTop="140dp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/diceButtonOne"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/greydiceone"
+                android:scaleType="fitCenter" />
+
+            <Button
+                android:id="@+id/diceButtonTwo"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/greydiceone"
+                android:scaleType="fitCenter" />
+
+            <Button
+                android:id="@+id/diceButtonThree"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/greydiceone"
+                android:scaleType="fitCenter" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/diceButtonFour"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/greydiceone"
+                android:scaleType="fitCenter" />
+
+            <Button
+                android:id="@+id/diceButtonFive"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/greydiceone"
+                android:scaleType="fitCenter" />
+
+            <Button
+                android:id="@+id/diceButtonSix"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/greydiceone"
+                android:scaleType="fitCenter" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/totalScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_score"
+        android:textColor="#2C2C2E"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/totalScoreCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actionButtonsLayout" />
+
+    <TextView
+        android:id="@+id/totalScoreCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="92dp"
+        android:text="@string/total_score_count"
+        android:textColor="#73C3AA"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
